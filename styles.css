@@ -121,7 +121,7 @@ header.sticky ul li a {
 /* About section design */
 
 .about {
-  padding: 100px;
+  padding: 10% 0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -169,7 +169,7 @@ P {
 /* Service section design */
 .sec {
   background: black;
-  padding: 100px;
+  padding: 10% 0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -229,6 +229,8 @@ P {
   background: #000;
   background-image: url(./assets/bottom.svg);
   background-size: cover;
+  padding: 10% 0; /* Adjust the padding to control the section height */
+  min-height: 100vh; /* Adjust the height for PC fullscreen */
 }
 
 .contact h3,
