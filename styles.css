@@ -111,7 +111,7 @@ header.sticky ul li a {
   text-align: center;
   line-height: 1em;
   background-image: linear-gradient(45deg,#fff 50%,#a5a7a8 50%);
-  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .banner h2 span {
