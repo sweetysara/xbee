@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One:200,300,400,500,600,700,800,900&display=swap');
 
 
 * {
@@ -14,6 +15,13 @@ html {
 }
 
 body {
+  background: url(./assets/img5.png) fixed; /* Set background image as fixed */
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   min-height: 1000px;
 }
 
@@ -71,13 +79,13 @@ header ul li a {
   text-decoration: none;
   color: #83242d;
   letter-spacing: 2px;
-  font-weight: 300;
+  font-weight: 600;
   transition: 0.6s;
 }
 
 header.sticky .logo,
 header.sticky ul li a {
-  color: #000;
+  color: #83242d;
 }
 
 /* Banner section design */
@@ -86,8 +94,6 @@ header.sticky ul li a {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url(./assets/img5.png) fixed; /* Set background image as fixed */
-  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +101,7 @@ header.sticky ul li a {
 }
 
 .banner h2 {
-  color: #efefe4;
+  color: #000000;
   font-size: 90px;
   text-transform: uppercase;
   text-align: center;
@@ -103,8 +109,7 @@ header.sticky ul li a {
 }
 
 .banner h2 span {
-  color: #83242d
-  ;
+  color: #83242d;
 }
 
 
@@ -112,148 +117,144 @@ header.sticky ul li a {
 /* About section design */
 
 .about {
-  background: #fff; /* Set background to transparent */
-  /* padding: 100px; */
+  background: transparent; /* Set background to transparent */
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  padding: 80px 0;
   align-items: center;
   position: relative; /* Add position relative */
   z-index: 2; /* Set z-index to ensure it's above the banner */
 }
 
 
-
-.section_para
-{
-  color: #000000;
+/* About box */
+.about-box {
+  background-color: #ccc; /* Background color */
+  padding: 30px; /* Padding around the box */
+  border-radius: 50px; /* Rounded corners */
 }
+
 
 .about .content {
-  position: relative;
   text-align: center;
-  width: 100%;
 }
 
-
-.mxw800p {
+.about .mxw800p {
   max-width: 800px;
   margin: 0 auto;
-  border-radius: 20px;
-  background-color: aqua;
 }
 
-
-
-
-.h3_para {
+.h3_about {
   font-size: 40px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  color: #000000;
-}
-
-P {
-  position: relative;
-  font-size: 18px;
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: 20px;
-  color: #000000;
+  color: #83242d; /* Heading color */
 }
 
-.about_para
-{
-  color: #000000
+.about_para {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444; /* Text color */
+  padding-bottom: 25px;
 }
-
 
 .btn {
-  position: relative;
   display: inline-block;
-  padding: 10px 30px;
-  background: #000;
+  padding: 10px 20px;
+  background: #83242d; /* Button background color */
+  color: #fff; /* Button text color */
   text-decoration: none;
-  color: #ffffff;
-  border-radius: 50px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
+
+.btn:hover {
+  background-color: #6d1d26; /* Darker color on hover */
+}
+
 
 
 /* Service section design */
 
 .services {
-  background: url(assets/cosmos.jpg);
-  background-size: cover;
-  padding: 100px;
+  background: transparent;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 180px 0;
 }
 
-.section_para
-{
-  color: #ffffff;
+/* Service box */
+.service-box {
+  background-color: #ccc; /* Background color */
+  padding: 30px; /* Padding around the box */
+  border-radius: 50px; /* Rounded corners */
 }
+
 
 .services .content {
-  position: relative;
   text-align: center;
-  width: 100%;
 }
 
-
-.mxw800p {
+.services .mxw800p {
   max-width: 800px;
   margin: 0 auto;
 }
 
-h3 {
+.h3_services {
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #83242d; /* Heading color */
+}
+
+.service-container {
+  display: flex; /* Set container to flexbox */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.service-card {
+  flex: 0 0 calc(50% - 20px); /* Set width of each card */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h4 {
+  font-size: 24px;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #83242d; /* Heading color */
 }
 
-P {
-  position: relative;
+.service-card p {
   font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.services_para
-{
-  color: #ffffff
+  color: #444; /* Text color */
 }
 
 
-.btn {
-  position: relative;
-  display: inline-block;
-  padding: 10px 30px;
-  background: #000;
-  text-decoration: none;
-  color: #ffffff;
-  border-radius: 50px;
-}
+
 
 /* Contact section design */
 
 .contact {
-  background: url(assets/cosmos.jpg);
-  background-size: cover;
-  padding: 100px;
+  background: transparent;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
-.section_para
-{
-  color: #ffffff;
-}
+
 
 .contact .content {
   position: relative;
@@ -262,41 +263,57 @@ P {
 }
 
 
-.mxw800p {
+.contact .mxw800p {
   max-width: 800px;
   margin: 0 auto;
-}
-
-h3 {
-  font-size: 40px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-P {
-  position: relative;
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.services_para
-{
-  color: #ffffff
-}
-
-
-.btn {
-  position: relative;
-  display: inline-block;
-  padding: 10px 30px;
-  background: #000;
-  text-decoration: none;
-  color: #ffffff;
   border-radius: 50px;
+  background-color: #ccc;
+  padding: 20px;
 }
+
+.h3_contact {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #83242d;
+}
+
+
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding subtle shadow for depth */
+}
+
+.contact-box h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #83242d; /* Heading color */
+}
+
+.contact-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444; /* Text color */
+}
+
+/* Hover effect */
+.contact-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 /* responsive design starts here  */
 
@@ -316,22 +333,22 @@ P {
   .toggle::before {
     content: '';
     position: absolute;
-    top: 4px;
+    top: 6px;
     width: 100%;
-    height: 2px;
-    background: #000;
+    height: 4px;
+    background: #83242d;
     z-index: 1;
-    box-shadow: 0 10px 0 #000;
+    box-shadow: 0 10px 0 #83242d;
     transition: 0.5s;
   }
 
   .toggle::after {
     content: '';
     position: absolute;
-    bottom: 4px;
+    bottom: 1px;
     width: 100%;
-    height: 2px;
-    background: #000;
+    height: 4px;
+    background: #83242d;
     z-index: 1;
     transition: 0.5s;
 
@@ -351,9 +368,10 @@ P {
     height: 100wh;
     text-align: center;
     overflow: auto;
-    background: #fff;
+    background: #ffffff;
     visibility: hidden;
     opacity: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
   }
 
   header.active ul {
@@ -371,7 +389,7 @@ P {
 
   header .logo,
   header ul li a {
-    color: #000000;
+    color: #83242d;
   }
 
   .banner {
@@ -381,5 +399,58 @@ P {
   .banner h2 {
     font-size: 60px;
     padding: 0 50px;
+  }
+
+  .about-box,
+  .service-box,
+  .contact .mxw800p {
+    border-radius: 20px; /* Adjust border radius */
+    padding: 20px; /* Adjust padding */
+  }
+
+  .h3_about,
+  .h3_services,
+  .h3_contact {
+    font-size: 30px; /* Decrease heading font size */
+  }
+
+  .service-card,
+  .contact-box {
+    margin-bottom: 20px; /* Adjust margin */
+    padding: 20px; /* Adjust padding */
+  }
+
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 20px; /* Adjust header padding */
+  }
+
+
+  header ul {
+    top: 59px; /* Adjust top position of the navigation */
+  }
+
+  .banner h2 {
+    font-size: 30px; /* Decrease banner heading font size */
+  }
+
+  .about-box,
+  .service-box,
+  .contact .mxw800p {
+    border-radius: 10px; /* Decrease border radius */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .h3_about,
+  .h3_services,
+  .h3_contact {
+    font-size: 24px; /* Decrease heading font size */
+  }
+
+  .service-card,
+  .contact-box {
+    padding: 15px; /* Adjust padding */
   }
 }

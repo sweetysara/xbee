@@ -12,32 +12,30 @@
     <header id="header">
         <a href="#" class="logo">X.AI</a>
         <ul>
-            <li><a href="#home" onclick="toggle()">Home</a></li>
-            <li><a href="#about" onclick="toggle()">About</a></li>
-            <li><a href="#services" onclick="toggle()">Services</a></li>
-            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+            <li><a href="#home" onclick="toggle()">HOME</a></li>
+            <li><a href="#about" onclick="toggle()">ABOUT</a></li>
+            <li><a href="#services" onclick="toggle()">SERVICES</a></li>
+            <li><a href="#contact" onclick="toggle()">CONTACT</a></li>
 
         </ul>
         <div class="toggle" onclick="toggle()"></div>
     </header>
     <!--Banner-->
     <section class="banner" id="home">
-        <h2>Lorem Ipsum<span> Lorem</span> Ipsum.</h2>
+        <h2><span> Lorem</span> Ipsum<span> Lorem</span> Ipsum.</h2>
     </section>
 
     <!--About-->
     <section class="about" id="about">
         <div class="content">
-            <div class="mxw800p">
-                <h3 class="h3_para">Who We Are</h3>
+            <div class="mxw800p about-box">
+                <h3 class="h3_about">Who We Are</h3>
                 <p class="about_para">
-                    What is Lorem Ipsum?
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
                 <a href="#" class="btn">Get Started</a>
             </div>
@@ -47,16 +45,20 @@
     <section class="services" id="services">
         <div class="content">
             <div class="mxw800p">
-                <h3>What We Do</h3>
-                <p class="about_para">
-                    What is Lorem Ipsum?
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                <div class="service-box">
+                    <h3 class="h3_services">What We Do</h3>
+                    <div class="service-container">
+                        <div class="service-card">
+                            <h4>Service Title 1</h4>
+                            <p>Description of the service goes here. You can provide details about what the service offers and its benefits.</p>
+                        </div>
+                        <div class="service-card">
+                            <h4>Service Title 2</h4>
+                            <p>Description of the service goes here. You can provide details about what the service offers and its benefits.</p>
+                        </div>
+                        <!-- Add more service cards as needed -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -64,25 +66,35 @@
     <section class="contact" id="contact">
         <div class="content">
             <div class="mxw800p">
-                <h3>Contact Us</h3>
-                <p class="about_para">
-                    What is Lorem Ipsum?
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                <h3 class="h3_contact">Contact Us</h3>
+                <div class="contact-grid">
+                    <div class="contact-box">
+                        <h4>Address</h4>
+                        <p>123 Main Street<br>City, Country<br>Postal Code</p>
+                    </div>
+                    <div class="contact-box">
+                        <h4>Contact Details</h4>
+                        <p>Phone: +123456789<br>Fax: +987654321</p>
+                    </div>
+                    <div class="contact-box">
+                        <h4>Email Us</h4>
+                        <p>info@example.com<br>support@example.com</p>
+                    </div>
+                    <div class="contact-box">
+                        <h4>Open Hours</h4>
+                        <p>Monday-Friday: 9am-5pm<br>Saturday: 10am-3pm<br>Sunday: Closed</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
     <script type="text/javascript">
-        window.addEventListener("scroll", function (){
+        window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         })
-        function toggle(){
+        function toggle() {
             var header = document.querySelector("header");
             header.classList.toggle("active");
         }
