@@ -367,6 +367,7 @@ header.sticky ul li a {
   header.sticky {
     padding: 5px 50px;
     background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
   }
 
   header ul {
@@ -374,21 +375,24 @@ header.sticky ul li a {
     top: 59px;
     left: 0;
     width: 100%;
-    height: 100wh;
     text-align: center;
-    overflow: auto;
+    height: 0; /* Initially set height to 0 */
+    overflow: hidden; /* Hide overflowing content */
     background: #ffffff;
     visibility: hidden;
     opacity: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    transition: max-height 0.3s ease, visibility 0.3s ease, opacity 0.3s ease; /* Smooth transition for max-height, visibility, and opacity */
   }
-
+  
   header.active ul {
+    height: auto; /* Set height to auto to reveal the list */
     visibility: visible;
     opacity: 1;
     display: block;
     padding-top: 20px;
+    max-height: 500px; /* Set a maximum height to enable smooth transition */
   }
+
 
   header.active ul li a {
     display: inline-block;
