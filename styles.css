@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One:200,300,400,500,600,700,800,900&display=swap');
 
 
 * {
@@ -14,6 +15,13 @@ html {
 }
 
 body {
+  background: url(./assets/img5.png) fixed; /* Set background image as fixed */
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   min-height: 1000px;
 }
 
@@ -43,12 +51,16 @@ header.sticky {
 header .logo {
   position: relative;
   font-weight: 700;
-  color: #fff;
+  color: #83242d;
   text-decoration: none;
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.6s;
+}
+
+header .logo:hover {
+  transform: scale(1.2); /* Enlarge on hover */
 }
 
 header ul {
@@ -68,15 +80,21 @@ header ul li a {
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  color: #fff;
+  color: #83242d; /* Initial color */
   letter-spacing: 2px;
-  font-weight: 300;
-  transition: 0.6s;
+  font-weight: 600;
+  border-bottom: 2px solid transparent; /* Transparent border initially */
+  transition: border-bottom 0.3s ease, color 0.3s ease; /* Smooth transition for border and color */
+}
+
+header ul li a:hover {
+  border-bottom: 2px solid #83242d; /* Solid border on hover */
+  color: #000000; /* Change color to black on hover */
 }
 
 header.sticky .logo,
 header.sticky ul li a {
-  color: #000;
+  color: #83242d;
 }
 
 /* Banner section design */
@@ -85,27 +103,14 @@ header.sticky ul li a {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url(./assets/b1.svg);
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -2;
+  z-index: 1; /* Ensure the banner is behind other sections */
 }
 
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0, 0.7 ); /* White with 50% opacity */
-  z-index:-1;
-} 
-
 .banner h2 {
-  color: #fff;
+  color: #000000;
   font-size: 90px;
   text-transform: uppercase;
   text-align: center;
@@ -114,225 +119,210 @@ header.sticky ul li a {
 }
 
 .banner h2 span {
-  color: #000000;
-  text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 40px #a5a7a8;
+  color: #83242d;
 }
+
+
 
 /* About section design */
 
 .about {
-  padding: 10% 0;
+  background: transparent; /* Set background to transparent */
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  padding: 80px 0;
   align-items: center;
-  background-image: url(./assets/ab.png);
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  position: relative; /* Add position relative */
+  z-index: 2; /* Set z-index to ensure it's above the banner */
 }
+
+
+/* About box */
+.about-box {
+  background-color: #ccc; /* Background color */
+  padding: 30px; /* Padding around the box */
+  border-radius: 50px; /* Rounded corners */
+}
+
 
 .about .content {
-  position: relative;
   text-align: center;
-  width: 100%;
 }
 
-
-.mxw800p {
+.about .mxw800p {
   max-width: 800px;
   margin: 0 auto;
 }
 
-h3 {
+.h3_about {
   font-size: 40px;
-  font-weight: 200;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #83242d; /* Heading color */
 }
 
-P {
-  position: relative;
+.about_para {
   font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #444; /* Text color */
+  padding-bottom: 25px;
 }
 
 .btn {
-  position: relative;
   display: inline-block;
-  padding: 10px 30px;
-  background: #000;
+  padding: 10px 20px;
+  background: #83242d; /* Button background color */
+  color: #fff; /* Button text color */
   text-decoration: none;
-  color: #fff;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+  background-color: #6d1d26; /* Darker color on hover */
+}
+
+
+
 /* Service section design */
-.sec {
-  background: black;
-  padding: 10% 0;
+
+.services {
+  background: transparent;
+  min-height: 100vh;
+  padding: 180px 0;
+}
+
+/* Service box */
+.service-box {
+  background-color: #ccc; /* Background color */
+  padding: 30px; /* Padding around the box */
+  border-radius: 50px; /* Rounded corners */
+}
+
+
+.services .content {
+  text-align: center;
+}
+
+.services .mxw800p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.h3_services {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #83242d; /* Heading color */
+}
+
+.service-container {
+  display: flex; /* Set container to flexbox */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.service-card {
+  flex: 0 0 calc(50% - 20px); /* Set width of each card */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #83242d; /* Heading color */
+}
+
+.service-card p {
+  font-size: 18px;
+  color: #444; /* Text color */
+}
+
+
+
+
+/* Contact section design */
+
+.contact {
+  background: transparent;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-  
+  position: relative;
+  z-index: 2;
 }
 
-.sec .content {
+
+
+.contact .content {
   position: relative;
   text-align: center;
   width: 100%;
-  color:#a5a7a8;
 }
 
 
-
-.services {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
-  max-width: 100%;
-  margin-top: 40px;
-}
-
-
-.services .box {
-  width: 300px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-}
-
-.services .box .iconBx {
-  margin-top: 25px;
-}
-
-.services .box .iconBx img {
-  max-width: 70px;
-  margin-bottom: 15px;
-}
-
-.services .box h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-
-/* Contact section design  */
-
-.contact {
-  background: #000;
-  background-image: url(./assets/bottom.svg);
-  background-size: cover;
-  padding: 10% 0; /* Adjust the padding to control the section height */
-  min-height: 100vh; /* Adjust the height for PC fullscreen */
-}
-
-.contact h3,
-.contact p {
-  color: #fff;
-}
-
-.contactForm {
-  position: relative;
+.contact .mxw800p {
   max-width: 800px;
   margin: 0 auto;
-  display: flex;
+  border-radius: 50px;
+  background-color: #ccc;
+  padding: 20px;
 }
 
-.contactForm form {
-  width: 100%;
+.h3_contact {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #83242d;
 }
 
-.contactForm .row100 {
-  display: flex;
-  width: 100%;
+
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.contactForm .row100 .inputBx50 {
-  width: 50%;
-  margin: 0 20px;
+.contact-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding subtle shadow for depth */
 }
 
-.contactForm .row100 .inputBx100 {
-  width: 100%;
-  margin: 0 20px;
+.contact-box h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #83242d; /* Heading color */
 }
 
-.contactForm .row100 input,
-.contactForm .row100 textarea {
-  position: relative;
-  border: none;
-  border-bottom: 1px solid #fff;
-  color: #fff;
-  background: transparent;
-  width: 100%;
-  padding: 10px 0;
-  outline: none;
+.contact-box p {
   font-size: 18px;
-  font-weight: 300;
-  margin: 20px 0;
-  resize: none;
+  line-height: 1.6;
+  color: #444; /* Text color */
 }
 
-.contactForm .row100 textarea {
-  height: 100px;
+/* Hover effect */
+.contact-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.contactForm .row100 input::placeholder,
-.contactForm .row100 textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
 
-.contactForm .row100 input[type="submit"] {
-  background: #fff;
-  color: #000;
-  max-width: 100px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.sci {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-}
-
-.sci ul {
-  display: flex;
-}
-
-.sci ui li {
-  list-style: none;
-}
-
-.sci ul li a {
-  text-decoration: none;
-  display: inline-block;
-  margin: 0 30px;
-}
-
-.sci ul li a img {
-  filter: invert(1);
-  max-width: 40px;
-}
-
-.sci ul li a:hover img {
-  opacity: 0.5;
-}
-
-.copyright a {
-  color: #fff;
-}
 
 
 /* responsive design starts here  */
@@ -353,22 +343,22 @@ P {
   .toggle::before {
     content: '';
     position: absolute;
-    top: 4px;
+    top: 6px;
     width: 100%;
-    height: 2px;
-    background: #000;
+    height: 4px;
+    background: #83242d;
     z-index: 1;
-    box-shadow: 0 10px 0 #000;
+    box-shadow: 0 10px 0 #83242d;
     transition: 0.5s;
   }
 
   .toggle::after {
     content: '';
     position: absolute;
-    bottom: 4px;
+    bottom: 1px;
     width: 100%;
-    height: 2px;
-    background: #000;
+    height: 4px;
+    background: #83242d;
     z-index: 1;
     transition: 0.5s;
 
@@ -378,6 +368,7 @@ P {
   header.sticky {
     padding: 5px 50px;
     background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
   }
 
   header ul {
@@ -385,20 +376,24 @@ P {
     top: 59px;
     left: 0;
     width: 100%;
-    height: 100wh;
     text-align: center;
-    overflow: auto;
-    background: #fff;
+    height: 0; /* Initially set height to 0 */
+    overflow: hidden; /* Hide overflowing content */
+    background: #ffffff;
     visibility: hidden;
     opacity: 0;
+    transition: max-height 0.3s ease, visibility 0.3s ease, opacity 0.3s ease; /* Smooth transition for max-height, visibility, and opacity */
   }
-
+  
   header.active ul {
+    height: auto; /* Set height to auto to reveal the list */
     visibility: visible;
     opacity: 1;
     display: block;
     padding-top: 20px;
+    max-height: 500px; /* Set a maximum height to enable smooth transition */
   }
+
 
   header.active ul li a {
     display: inline-block;
@@ -408,7 +403,7 @@ P {
 
   header .logo,
   header ul li a {
-    color: #000;
+    color: #83242d;
   }
 
   .banner {
@@ -420,40 +415,56 @@ P {
     padding: 0 50px;
   }
 
-  .sec {
-    padding: 100px 50px 50px 50px;
+  .about-box,
+  .service-box,
+  .contact .mxw800p {
+    border-radius: 20px; /* Adjust border radius */
+    padding: 20px; /* Adjust padding */
   }
 
-  .services .box {
-    width: 100%;
+  .h3_about,
+  .h3_services,
+  .h3_contact {
+    font-size: 30px; /* Decrease heading font size */
   }
 
-  .stats {
-    padding-top: 250px;
+  .service-card,
+  .contact-box {
+    margin-bottom: 20px; /* Adjust margin */
+    padding: 20px; /* Adjust padding */
   }
 
-  .row100 {
-    flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 20px; /* Adjust header padding */
   }
 
-  .contactForm .row100 .inputBx50 .contactForm .row100 .inputBx100 {
-    width: 100%;
-    margin: 0;
+
+  header ul {
+    top: 59px; /* Adjust top position of the navigation */
   }
 
-  .sci {
-    margin: 20px;
+  .banner h2 {
+    font-size: 30px; /* Decrease banner heading font size */
   }
 
-  .sci ul li a img {
-    font-size: 24px;
+  .about-box,
+  .service-box,
+  .contact .mxw800p {
+    border-radius: 10px; /* Decrease border radius */
+    padding: 15px; /* Adjust padding */
   }
 
-  h3 {
-    font-size: 36px;
+  .h3_about,
+  .h3_services,
+  .h3_contact {
+    font-size: 24px; /* Decrease heading font size */
   }
 
-  .contactForm .row100{
-    padding-right: 40px;
+  .service-card,
+  .contact-box {
+    padding: 15px; /* Adjust padding */
   }
 }
